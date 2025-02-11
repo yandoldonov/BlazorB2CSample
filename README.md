@@ -1,0 +1,1 @@
+This is a minimal sample implementation of Blazor Server side Azure B2C authentication. This repo exists as reference point in technical discussions on possible configuraiton scenarios related to Blazor authentication/authorization with B2C.
