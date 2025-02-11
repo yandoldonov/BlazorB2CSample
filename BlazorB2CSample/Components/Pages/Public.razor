@@ -1,0 +1,22 @@
+﻿@page "/Public"
+@using Microsoft.AspNetCore.Authorization
+@attribute [AllowAnonymous]
+<PageTitle>Public</PageTitle>
+
+<div>
+    this is public page html content
+</div>
+<div>
+    <button role="button" type="button" @onclick="Click">Click</button>
+</div>
+<div>
+    @_guid
+</div>
+@code {
+    private string _guid = string.Empty;
+
+    private void Click()
+    {
+        _guid = System.Guid.NewGuid().ToString();
+    }
+}

@@ -1,0 +1,30 @@
+﻿@page "/"
+@inject NavigationManager Navigation
+
+<PageTitle>Home</PageTitle>
+
+<PageTitle>Home</PageTitle>
+
+<button @onclick="Logout">Logout</button>
+
+<div>
+    <button role="button" type="button" @onclick="Click">Click</button>
+</div>
+<div>
+    @_guid
+</div>
+
+@code {
+
+    private string _guid = string.Empty;
+
+    private void Click()
+    {
+        _guid = System.Guid.NewGuid().ToString();
+    }
+
+    private void Logout()
+    {
+        Navigation.NavigateTo("MicrosoftIdentity/Account/SignOut", forceLoad: true);
+    }
+}
